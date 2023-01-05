@@ -1,0 +1,52 @@
+{
+    "definition": {
+        "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+        "actions": {
+            "Response": {
+                "type": "Response",
+                "kind": "http",
+                "inputs": {
+                    "statusCode": 200,
+                    "body": {
+                        "games": [
+                            {
+                                "FT": "1-3",
+                                "gamedate": "Sat Aug 17 2013",
+                                "matchday": 1,
+                                "team1": "Arsenal FC",
+                                "team2": "Aston Villa FC"
+                            },
+                            {
+                                "FT": "1-0",
+                                "gamedate": "Sat Aug 17 2013",
+                                "matchday": 1,
+                                "team1": "Liverpool FC",
+                                "team2": "Stoke City FC"
+                            },
+                            {
+                                "FT": "2-2",
+                                "gamedate": "Sat Aug 17 2013",
+                                "matchday": 1,
+                                "team1": "Norwich City FC",
+                                "team2": "Everton FC"
+                            }
+                        ]
+                    }
+                },
+                "runAfter": {}
+            }
+        },
+        "triggers": {
+            "manual": {
+                "type": "Request",
+                "kind": "Http",
+                "inputs": {
+                    "method": "GET"
+                }
+            }
+        },
+        "contentVersion": "1.0.0.0",
+        "outputs": {}
+    },
+    "kind": "Stateful"
+}
