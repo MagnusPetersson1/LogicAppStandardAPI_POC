@@ -44,9 +44,6 @@ To deploy API workflow … TBU.
 ## Deploy the code  
 Deploy the code to the API App. Use VS code, use Az or any other of the ways that are available.
 
-```bash
-az webapp deployment list-publishing-credentials --name <API app name> --resource-group <resource-group-name> --subscription <subscription id>
-```
 ## For API Management representation  
 To deploy API App, run GameAPIApp.bicep file together with GameAPIApp-DEV.parameters.json. OBS! *..parameters.json, GameAPIAppPolicy.xml,*.bicep needs to be updated with your details. 
 
